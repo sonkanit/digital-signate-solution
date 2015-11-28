@@ -4,14 +4,13 @@
 #include <string>
 #include <curl/curl.h>
 
-template <class T>
 class HttpDownloader
 {
     public:
         HttpDownloader();
         virtual ~HttpDownloader();
 
-        void download(std::string url, T& object);
+        void download(std::string url);
 
         static void init();
     protected:

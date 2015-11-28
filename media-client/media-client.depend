@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1448715648 source:/home/sonkanit/Projects/media-client/main.cpp
+1448724568 source:/home/sonkanit/Projects/media-client/main.cpp
 	<iostream>
 	"HttpDownloader.h"
+	"PlaySchedule.h"
 
-1448719853 /home/sonkanit/Projects/media-client/include/HttpDownloader.h
+1448724493 /home/sonkanit/Projects/media-client/include/HttpDownloader.h
 	<string>
 	<curl/curl.h>
 
@@ -17,14 +18,14 @@
 
 1448694630 /home/sonkanit/Projects/media-client/include/SignalHandler.h
 
-1448715631 source:/home/sonkanit/Projects/media-client/src/HttpDownloader.cpp
+1448724478 source:/home/sonkanit/Projects/media-client/src/HttpDownloader.cpp
 	"HttpDownloader.h"
-	<curl/curl.h>
 
-1448715651 source:/home/sonkanit/Projects/media-client/src/PlaySchedule.cpp
+1448724521 source:/home/sonkanit/Projects/media-client/src/PlaySchedule.cpp
 	"PlaySchedule.h"
+	"HttpDownloader.h"
 
-1448715660 /home/sonkanit/Projects/media-client/include/PlaySchedule.h
+1448720082 /home/sonkanit/Projects/media-client/include/PlaySchedule.h
 	<vector>
 	<time.h>
 

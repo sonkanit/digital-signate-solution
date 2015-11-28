@@ -15,8 +15,8 @@ void PlaySchedule::Update()
 {
     Schedule newSchedule;
     //download
-    HttpDownloader<Schedule> downloader;
-    downloader.download("http://127.0.0.1:8080", newSchedule);
+    HttpDownloader downloader;
+    downloader.download("http://127.0.0.1:8080");
     //update
 }
 

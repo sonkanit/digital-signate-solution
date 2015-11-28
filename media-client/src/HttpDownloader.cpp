@@ -12,11 +12,11 @@ HttpDownloader::~HttpDownloader()
     //dtor
 }
 
-template class<T>
-void HttpDownloader::download(std::string url, T& object)
+void HttpDownloader::download(std::string url)
 {
     curl_easy_setopt(ms_pHandle, CURLOPT_URL, url.c_str());
-    curl_easy_setopt(ms_pHandle, CURLOPT_WRITEDATA, pObject);
+    //curl_easy_setopt(ms_pHandle, CURLOPT_WRITEDATA, pObject);
+    curl_easy_perform(ms_pHandle);
 }
 
 void HttpDownloader::init()
