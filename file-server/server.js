@@ -3,7 +3,20 @@ var http = require('http');
 const PORT=8080;
 
 function handleRequest(request, response){
-    response.end('It Works!! Path Hit: ' + request.url);
+    var schedule = [{
+            dayOfWeek: 0,
+            time: '23:59:00',
+            resource: '/media/test.mkv',
+            type: 'video'
+        }, {
+            dayOfWeek: 0,
+            time: '23:59:30',
+            resource: '/media/test.jpg',
+            type: 'image'
+        }
+    ];
+
+    response.end(JSON.stringify(schedule));
 }
 
 var server = http.createServer(handleRequest);
