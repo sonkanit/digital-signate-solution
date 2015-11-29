@@ -2,20 +2,16 @@
 #define PLAYSCHEDULE_H
 
 #include <vector>
+#include <memory>
 #include <time.h>
 
 class Media;
 
-struct ScheduleItem
+class ScheduleItem
 {
-    time_t time;
-    Media* pMedia;
-};
-
-struct Schedule
-{
-    int size;
-    ScheduleItem* items;
+    public:
+        time_t time;
+        std::shared_ptr<Media> pMedia;
 };
 
 class PlaySchedule
@@ -24,13 +20,14 @@ class PlaySchedule
         PlaySchedule();
         virtual ~PlaySchedule();
 
-        void Update();
-        void Start();
-        void Stop();
+        void update();
+        void start();
+        void stop();
     protected:
 
     private:
-        std::vector<ScheduleItem> m_playList;
+        void parse(std::vector<unsigned char>& data);
+        std::vector<std::shared_ptr<ScheduleItem> > m_playList;
 };
 
 #endif // PLAYSCHEDULE_H

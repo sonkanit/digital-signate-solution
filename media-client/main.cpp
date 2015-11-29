@@ -8,6 +8,7 @@ int main()
 {
     HttpDownloader::init();
     PlaySchedule player;
-    player.Update();
+    player.update();
+    player.start();
     return 0;
 }
