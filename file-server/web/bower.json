@@ -1,0 +1,25 @@
+{
+  "name": "web",
+  "homepage": "https://github.com/sonkanit/digital-signate-solution",
+  "authors": [
+    "Kanit Mekritthikrai <sonkanit@yahoo.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#~1.4.8",
+    "angular-route": "~1.4.8",
+    "angular-bootstrap": "~0.14.3",
+    "bootstrap": "~3.3.6"
+  }
+}
